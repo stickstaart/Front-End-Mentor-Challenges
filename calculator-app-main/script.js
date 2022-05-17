@@ -29,3 +29,5 @@ numberBtn.map((number) => {
 });
 
 // YOUTUBE VID https://www.youtube.com/watch?v=QS6Y0ezhyCs 10.05 min
+
+// It is very bad practise to use EVAL() because of the security risk and high vulnerability. So I will be rewriting a function for the equals button.
