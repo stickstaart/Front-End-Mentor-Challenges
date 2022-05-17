@@ -6,6 +6,11 @@
   color: hsl(228, 45%, 44%);
 }
 
+* {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+}
+
 .calculator-grid {
   /* CENTER CALCULATOR */
   position: absolute;
@@ -20,8 +25,8 @@
   grid-gap: 25px;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(6, 1fr);
-  background-color: hsl(228, 45%, 44%);
-  width: 400px;
+  background-color: hsl(222, 26%, 31%);
+  width: 375px;
   height: 650px;
 }
 
@@ -32,7 +37,38 @@
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 2;
-  background-color: rgb(60, 255, 0);
+}
+
+.top-one {
+  display: flex;
+  margin: 0;
+  width: 50%;
+  height: auto;
+}
+
+.top-one-calc {
+  color: hsl(0, 0%, 100%);
+  align-self: center;
+  font-size: 2.5em;
+}
+
+.top-two {
+  display: flex;
+  margin: 0;
+  width: 50%;
+}
+
+.top-two-theme {
+  color: hsl(0, 0%, 100%);
+  align-self: center;
+  font-size: 1em;
+  width: 50%;
+  text-transform: uppercase;
+}
+
+.top-two-radios {
+  color: hsl(0, 0%, 100%);
+  width: 50%;
 }
 
 .display {
@@ -40,7 +76,17 @@
   grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 3;
-  background-color: midnightblue;
+  background-color: hsl(224, 36%, 15%);
+}
+
+.display-outcome {
+  font-size: 50px;
+  padding-right: 25px;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  color: hsl(0, 0%, 100%);
 }
 
 .numpad {
@@ -53,7 +99,16 @@
   grid-column-end: 3;
   grid-row-start: 3;
   grid-row-end: 7;
-  background-color: rgb(255, 0, 0);
+  background-color: hsl(223, 31%, 20%);
+}
+
+.number {
+  border: 0;
+  padding: 0;
+  text-transform: uppercase;
+  height: 100%;
+  width: 100%;
+  font-size: 32px;
 }
 
 .reset {
@@ -61,42 +116,7 @@
   grid-column-end: 3;
 }
 
-.result {
+.equals {
   grid-column-start: 3;
   grid-column-end: 5;
-}
-
-.top-one {
-  display: flex;
-  margin: 0;
-  width: 50%;
-  height: auto;
-  background-color: burlywood;
-}
-
-.top-one-calc {
-  border: 1px solid red;
-  height: 25%;
-}
-
-.top-two {
-  display: flex;
-  margin: 0;
-  width: 50%;
-  background-color: cadetblue;
-}
-
-.top-two-theme {
-  width: 50%;
-  background-color: yellow;
-}
-
-.top-two-radios {
-  width: 50%;
-  background-color: rgb(60, 255, 0);
-}
-
-label > input [type="radio"] {
-  margin-top: -2px;
-  vertical-align: top;
 }
