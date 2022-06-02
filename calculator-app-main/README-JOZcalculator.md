@@ -63,7 +63,30 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+It's great practise for me to build a project based on just a screenshot. I started laying the HTML foundation for the project, used flexbox for the overall layout and grid for the numpad.
+
+Some issues I came across were easily solved by using the correct classes. For me it's a challenge to keep things organised with classnames. It feels cluttered very easy, and this will sometimes result in errors while styling CSS, if classnames are not very much different from one another.
+
+Another issue was the styling of the radio buttons. I had never really done that before, so that was a nice learning moment for me, how to do that to get the result I needed. It turned out to be rather simple. Though I need to figure out of the use of -webkit-appearance is the best aproach to take, I am not convinced yet.
+
+As for the JavaScript, I have reviewed a couple of methods to do this, including one that was 100% HTML, but it didn't have the features I needed, it was too basic. So I made a simple version with JavaScript, but I made use of the function property "eval".
+
+```js
+function eval(x: string): any
+// Evaluates JavaScript code and executes it.
+// @param x — A String value that contains valid JavaScript code.
+```
+
+I found the folling statement on "eval" online:
+
+```html
+Do NOT use eval() Executing JavaScript from a string is an BIG security risk.
+With eval(), malicious code can run inside your application without permission.
+With eval(), third-party code can see the scope of your application, which can
+lead to possible attacks.
+```
+
+So this triggered me to find a solution to calculate the result without using eval() and while I was at it, made a more complex display (two, where the top display would show the last result and type of operand).
 
 To see how you can add code snippets, see below:
 
