@@ -1,7 +1,7 @@
 const outcomeDisplay = document.querySelector(".display-outcome");
 const numberBtn = Array.from(document.querySelectorAll(".number"));
-
-console.log(numberBtn);
+const styleSelector = document.getElementById(`styleSelector`);
+const radios = Array.from(document.querySelectorAll("input"));
 
 numberBtn.map((number) => {
   number.addEventListener("click", (e) => {
@@ -24,6 +24,25 @@ numberBtn.map((number) => {
         break;
       default:
         outcomeDisplay.innerText += e.target.innerText;
+    }
+  });
+});
+
+radios.map((radio) => {
+  radio.addEventListener("click", (e) => {
+    switch (e.target.id) {
+      case "radio1":
+        console.log("Radio 1 clicked");
+        styleSelector.href = "css/theme1.css";
+        break;
+      case "radio2":
+        console.log("Radio 2 clicked");
+        styleSelector.href = "css/theme2.css";
+        break;
+      case "radio3":
+        console.log("Radio 3 clicked");
+        styleSelector.href = "css/theme3.css";
+        break;
     }
   });
 });

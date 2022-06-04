@@ -1,0 +1,250 @@
+:root {
+  /* THEME 1 BACKGROUNDS */
+  --theme1-main-background: hsl(222, 26%, 31%);
+  --theme1-toggle-keypad-background: hsl(223, 31%, 20%);
+  --theme1-screen-background: hsl(224, 36%, 15%);
+
+  /* THEME 1 KEYS */
+  --theme1-blue-key-background: hsl(225, 21%, 49%);
+  --theme1-blue-key-shadow: hsl(224, 28%, 35%);
+
+  --theme1-red-key-toggle-background: hsl(6, 63%, 50%);
+  --theme1-red-key-shadow: hsl(6, 70%, 34%);
+
+  --theme1-grey-key-background: hsl(30, 25%, 89%);
+  --theme1-grey-key-shadow: hsl(28, 16%, 65%);
+
+  /* THEME 1 TEXT */
+  --theme1-text-grey-blue: hsl(221, 14%, 31%);
+  --theme1-text-white: hsl(0, 0%, 100%);
+
+  /* THEME 2 BACKGROUNDS */
+  --theme2-main-background: hsl(0, 0%, 90%);
+  --theme2-toggle-keypad-background: hsl(0, 5%, 81%);
+  --theme2-screen-background: hsl(0, 0%, 93%);
+
+  /* THEME 2 KEYS */
+  --theme2-blue-key-background: hsl(185, 42%, 37%);
+  --theme2-blue-key-shadow: hsl(185, 58%, 25%);
+
+  --theme2-red-key-toggle-background: hsl(25, 98%, 40%);
+  --theme2-red-key-shadow: hsl(25, 99%, 27%);
+
+  --theme2-grey-key-background: hsl(45, 7%, 89%);
+  --theme2-grey-key-shadow: hsl(35, 11%, 61%);
+
+  /* THEME 2 TEXT */
+  --theme2-text-grey-blue: hsl(60, 10%, 19%);
+  --theme2-text-white: hsl(0, 0%, 100%);
+
+  /* THEME 3 BACKGROUNDS */
+  --theme3-main-background: hsl(268, 75%, 9%);
+  --theme3-toggle-screen-keypad-background: hsl(268, 71%, 12%);
+
+  /* THEME 3 KEYS */
+  --theme3-darkviolet-key-background: hsl(281, 89%, 26%);
+  --theme3-vividmagenta-key-shadow: hsl(285, 91%, 52%);
+
+  --theme3-purecyan-key-toggle-background: hsl(176, 100%, 44%);
+  --theme3-softcyan-key-shadow: hsl(177, 92%, 70%);
+
+  --theme3-verydarkviolet-key-background: hsl(268, 47%, 21%);
+  --theme3-darkmagenta-key-shadow: hsl(290, 70%, 36%);
+
+  /* THEME 3 TEXT */
+  --theme3-text-lightyellow: hsl(52, 100%, 62%);
+  --theme3-text-verydarkblue: hsl(198, 20%, 13%);
+  --theme3-text-white: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+* {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+}
+
+.calculator-grid {
+  /* CENTER CALCULATOR */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  display: grid;
+  padding: 25px;
+  grid-gap: 25px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  background-color: var(--theme1-main-background);
+  width: 375px;
+  height: 650px;
+  border-radius: 10px;
+}
+
+.calc-top {
+  margin: 0;
+  display: flex;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.top-one-container {
+  padding-bottom: 20px;
+  display: flex;
+  margin: 0;
+  width: 50%;
+  height: auto;
+}
+
+.top-one-calc {
+  color: var(--theme1-text-white);
+  align-self: flex-end;
+  font-size: 2.5em;
+}
+
+.top-two-container {
+  padding-bottom: 25px;
+  display: flex;
+  padding-left: 22px;
+  margin: 0;
+  width: 25%;
+  height: auto;
+}
+
+.top-two-theme {
+  color: var(--theme1-text-white);
+  align-self: flex-end;
+  font-size: 1em;
+  width: 25%;
+  text-transform: uppercase;
+}
+
+.top-three-container {
+  padding-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 0;
+  width: 25%;
+  height: auto;
+}
+
+.top-three-numbers {
+  padding-bottom: 3px;
+  color: var(--theme1-text-white);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.top-three-radios {
+  margin-top: 0;
+  padding-bottom: 2px;
+  background-color: var(--theme1-toggle-keypad-background);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 25px;
+  border-radius: 20px;
+}
+
+input[type="radio"] {
+  height: 15px;
+  width: 15px;
+  outline: none;
+  -webkit-appearance: none;
+  /* display: none; */
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked {
+  background: var(--theme1-red-key-toggle-background);
+}
+
+.display {
+  border-radius: 10px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-color: var(--theme1-screen-background);
+}
+
+.display-outcome {
+  font-size: 50px;
+  padding-right: 25px;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  color: var(--theme1-text-white);
+}
+
+.numpad {
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  padding: 25px;
+  grid-gap: 10px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 7;
+  background-color: var(--theme1-toggle-keypad-background);
+}
+
+.number {
+  border: 0px;
+  color: var(--theme1-text-grey-blue);
+  border-radius: 7px;
+  padding-top: 6px;
+  text-transform: uppercase;
+  height: 100%;
+  width: 100%;
+  font-size: 32px;
+  background-color: var(--theme1-grey-key-background);
+  box-shadow: 0px 3.5px 0px var(--theme1-grey-key-shadow);
+}
+
+.reset {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.equals {
+  color: var(--theme1-text-white);
+  grid-column-start: 3;
+  grid-column-end: 5;
+  background-color: var(--theme1-red-key-toggle-background);
+  box-shadow: 0px 3.5px 0px var(--theme1-red-key-shadow);
+}
+
+.delete,
+.reset {
+  font-size: 1.4em;
+  color: var(--theme1-text-white);
+  background-color: var(--theme1-blue-key-background);
+  box-shadow: 0px 3.5px 0px var(--theme1-blue-key-shadow);
+}

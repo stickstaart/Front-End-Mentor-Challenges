@@ -71,6 +71,8 @@ Another issue was the styling of the radio buttons. I had never really done that
 
 As for the JavaScript, I have reviewed a couple of methods to do this, including one that was 100% HTML, but it didn't have the features I needed, it was too basic. So I made a simple version with JavaScript, but I made use of the function property "eval".
 
+I saved implementing the three different themes for last, since this is also the first time I am doing this. There are multiple ways to do this. Using CSS variables is key I think. Now, I could make use of multiple CSS files for each theme, I can work with different classes for each theme or I can dynamically change the variables. I think the easiest way to do this, is by working with different classnames for each theme.
+
 ```js
 function eval(x: string): any
 // Evaluates JavaScript code and executes it.
