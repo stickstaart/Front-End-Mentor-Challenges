@@ -17,44 +17,6 @@
   /* THEME 1 TEXT */
   --theme1-text-grey-blue: hsl(221, 14%, 31%);
   --theme1-text-white: hsl(0, 0%, 100%);
-
-  /* THEME 2 BACKGROUNDS */
-  --theme2-main-background: hsl(0, 0%, 90%);
-  --theme2-toggle-keypad-background: hsl(0, 5%, 81%);
-  --theme2-screen-background: hsl(0, 0%, 93%);
-
-  /* THEME 2 KEYS */
-  --theme2-blue-key-background: hsl(185, 42%, 37%);
-  --theme2-blue-key-shadow: hsl(185, 58%, 25%);
-
-  --theme2-red-key-toggle-background: hsl(25, 98%, 40%);
-  --theme2-red-key-shadow: hsl(25, 99%, 27%);
-
-  --theme2-grey-key-background: hsl(45, 7%, 89%);
-  --theme2-grey-key-shadow: hsl(35, 11%, 61%);
-
-  /* THEME 2 TEXT */
-  --theme2-text-grey-blue: hsl(60, 10%, 19%);
-  --theme2-text-white: hsl(0, 0%, 100%);
-
-  /* THEME 3 BACKGROUNDS */
-  --theme3-main-background: hsl(268, 75%, 9%);
-  --theme3-toggle-screen-keypad-background: hsl(268, 71%, 12%);
-
-  /* THEME 3 KEYS */
-  --theme3-darkviolet-key-background: hsl(281, 89%, 26%);
-  --theme3-vividmagenta-key-shadow: hsl(285, 91%, 52%);
-
-  --theme3-purecyan-key-toggle-background: hsl(176, 100%, 44%);
-  --theme3-softcyan-key-shadow: hsl(177, 92%, 70%);
-
-  --theme3-verydarkviolet-key-background: hsl(268, 47%, 21%);
-  --theme3-darkmagenta-key-shadow: hsl(290, 70%, 36%);
-
-  /* THEME 3 TEXT */
-  --theme3-text-lightyellow: hsl(52, 100%, 62%);
-  --theme3-text-verydarkblue: hsl(198, 20%, 13%);
-  --theme3-text-white: hsl(0, 0%, 100%);
 }
 
 * {
@@ -172,8 +134,7 @@ input[type="radio"] {
   height: 15px;
   width: 15px;
   outline: none;
-  -webkit-appearance: none;
-  /* display: none; */
+  appearance: none;
   cursor: pointer;
   border-radius: 50%;
 }

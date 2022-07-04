@@ -1,0 +1,26 @@
+:root {
+  /* PRIMARY */
+  --Orange: hsl(25, 97%, 53%);
+
+  /* NEUTRAL */
+  --White: hsl(0, 0%, 100%);
+  --LightGrey: hsl(217, 12%, 63%);
+  --MediumGrey: hsl(216, 12%, 54%);
+  --DarkBlue: hsl(213, 19%, 18%);
+  --VeryDarkBlue: hsl(216, 12%, 8%);
+}
+
+/* The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px */
+
+* {
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+  font-size: 15px;
+}
+
+body {
+  margin: 0;
+}

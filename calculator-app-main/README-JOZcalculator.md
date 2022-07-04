@@ -67,7 +67,7 @@ It's great practise for me to build a project based on just a screenshot. I star
 
 Some issues I came across were easily solved by using the correct classes. For me it's a challenge to keep things organised with classnames. It feels cluttered very easy, and this will sometimes result in errors while styling CSS, if classnames are not very much different from one another.
 
-Another issue was the styling of the radio buttons. I had never really done that before, so that was a nice learning moment for me, how to do that to get the result I needed. It turned out to be rather simple. Though I need to figure out of the use of -webkit-appearance is the best aproach to take, I am not convinced yet.
+Another issue was the styling of the radio buttons. I had never really done that before, so that was a nice learning moment for me, how to do that to get the result I needed. It turned out to be rather simple. Though I need to figure out if the use of -webkit-appearance is the best aproach to take, I am not convinced yet.
 
 As for the JavaScript, I have reviewed a couple of methods to do this, including one that was 100% HTML, but it didn't have the features I needed, it was too basic. So I made a simple version with JavaScript, but I made use of the function property "eval".
 
