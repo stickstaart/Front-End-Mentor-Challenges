@@ -5,7 +5,7 @@
   /* NEUTRAL */
   --White: hsl(0, 0%, 100%);
   --LightGrey: hsl(217, 12%, 63%);
-  --MediumGrey: hsl(216, 12%, 54%);
+  --MediumGrey: rgb(126, 137, 154);
   --DarkBlue: hsl(213, 19%, 18%);
   --VeryDarkBlue: hsl(216, 12%, 8%);
 }
@@ -27,7 +27,11 @@
 
 body {
   margin: 0;
+  height: 100vh;
   background-color: var(--VeryDarkBlue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* =========================================================================================================== */
@@ -35,14 +39,19 @@ body {
 /* RATING STATE CSS START */
 
 .irc-container-rating {
+  display: block;
   border: 1px solid black;
   border-radius: 10px;
   background-color: var(--DarkBlue);
-  margin: 19px;
-  padding: 19px;
+  margin: 24px;
+  padding: 24px;
+  max-width: calc(375px - 48px);
+  min-width: calc(375px - 48px);
+  height: 365px;
 }
+
 .star {
-  background-color: var(--MediumGrey);
+  background-color: rgba(126, 137, 154, 0.1);
   border-radius: 50%;
   padding: 10px;
 }
@@ -54,6 +63,74 @@ body {
 
 .rating-paragraph {
   color: var(--LightGrey);
+  line-height: 150%;
+  margin-bottom: 30px;
+  letter-spacing: -0.4px;
+}
+
+.rating-radios {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 19px;
+}
+
+.radio {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(126, 137, 154, 0.1);
+  color: var(--MediumGrey);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+
+.radio:hover {
+  background-color: var(--Orange);
+  color: var(--White);
+  cursor: pointer;
+}
+
+.selected-radio {
+  background-color: var(--MediumGrey);
+  color: var(--White);
+}
+
+.submit-container {
+  display: flex;
+  justify-content: center;
+}
+
+.submit-btn {
+  all: unset;
+  background-color: var(--Orange);
+  width: 100%;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1000px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 3px;
+  font-size: 0.9rem;
+}
+
+.submit-btn:hover {
+  box-shadow: inset 0 0 0 1px var(--White);
+  /* in order: x offset, y offset, blur size, spread size, color */
+  /* blur size and spread size are optional (they default to 0) */
+}
+
+.submit-btn:active {
+  box-shadow: inset 0 0 0 1px var(--White);
+  /* in order: x offset, y offset, blur size, spread size, color */
+  /* blur size and spread size are optional (they default to 0) */
+  background-color: var(--LightGrey);
+  color: var(--White);
 }
 
 /* RATING STATE CSS END */
@@ -63,7 +140,43 @@ body {
 /* THANK YOU STATE CSS START */
 
 .irc-container-thankyou {
+  border: 1px solid black;
   display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: var(--DarkBlue);
+  padding: 24px;
+  max-width: calc(375px - 48px);
+  min-width: calc(375px - 48px);
+  height: 365px;
+}
+
+.thankyou-img {
+  margin-bottom: 5px;
+}
+
+.youselectedtxt {
+  color: var(--Orange);
+  background-color: rgba(126, 137, 154, 0.1);
+  padding: 8px 16px 8px 16px;
+  border-radius: 1000px;
+  margin-bottom: 5px;
+}
+
+.thankyou {
+  color: var(--White);
+  font-size: 1.7rem;
+  margin-bottom: 5px;
+}
+
+.thankyou-txt {
+  text-align: center;
+  color: var(--LightGrey);
+  line-height: 150%;
+  letter-spacing: -0.4px;
+  margin-bottom: 2px;
 }
 
 /* THANK YOU STATE CSS END */
