@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+* {
+  font-family: "Roboto Mono", monospace;
+}
+
+body {
+  background-color: black;
+}
+
+.container {
+  background-color: rgba(97, 97, 97, 0.521);
+  margin: auto;
+  border: 2px solid red;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.advice-id {
+  color: greenyellow;
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+
+.result {
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  font-weight: 700;
+}
