@@ -16,10 +16,6 @@ async function getapi(url) {
   console.log(data.slip.id);
   randomAdvice.innerHTML = `"${data.slip.advice}"`;
   adviceID.innerHTML = `advice #${data.slip.id}`;
-  if (response) {
-    hideloader();
-  }
-  show(data);
 }
 // // Calling that async function
 // getapi(api_url);
