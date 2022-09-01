@@ -35,6 +35,7 @@ body {
 }
 
 .advice-container {
+  min-width: 375px;
   max-width: 375px;
   background-color: var(--DarkGrayishBlue);
   margin: 15px;
@@ -67,7 +68,7 @@ body {
 .pattern-divider-mobile {
   transform: translateY(10px);
   margin-bottom: 0;
-  padding: 0 25px;
+  padding: 5px 25px;
 }
 
 .pattern-divider-desktop {
@@ -75,15 +76,38 @@ body {
 }
 
 .dice {
+  padding-top: 5px;
 }
 
 .newadvicebtn {
   margin-top: 0px;
-  transform: translateY(35px);
+  transform: translateY(31px);
   z-index: 1;
   border: none;
   background-color: var(--NeonGreen);
   width: 65px;
   height: 65px;
   border-radius: 50%;
+}
+
+.newadvicebtn:hover {
+  box-shadow: 0 0 35px 0px var(--NeonGreen);
+}
+
+@media screen and (min-width: 992px) {
+  .advice-container {
+    min-width: 550px;
+    max-width: 550px;
+  }
+
+  .pattern-divider-mobile {
+    display: none;
+  }
+
+  .pattern-divider-desktop {
+    display: unset;
+    transform: translateY(10px);
+    margin-bottom: 0;
+    padding: 5px 25px;
+  }
 }

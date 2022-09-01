@@ -2,6 +2,9 @@ const randomAdvice = document.querySelector(`.result`);
 const newAdviceBtn = document.querySelector(`.newadvicebtn`);
 const adviceID = document.querySelector(`.advice-id`);
 
+// execute api call when page loads
+window.onload = () => getapi(api_url);
+
 // api url
 const api_url = "https://api.adviceslip.com/advice";
 
