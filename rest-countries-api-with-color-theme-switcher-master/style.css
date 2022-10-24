@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+
+/* - Mobile: 375px
+- Desktop: 1440px */
+
+/* SETTING STANDARDS TO ZERO */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+/* COLORS */
+
+:root {
+  /* Dark Mode Elements */
+  --darkblue: hsl(209, 23%, 22%);
+  /* Dark Mode Background */
+  --verydarkblue: hsl(207, 26%, 17%);
+  /* Light Mode Text */
+  --superdarkblue: hsl(200, 15%, 8%);
+  /* Light Mode Input */
+  --darkgrey: hsl(0, 0%, 52%);
+  /* Light Mode Background */
+  --verylightgrey: hsl(0, 0%, 98%);
+  /* Dark Mode Text & Light Mode Elements */
+  --white: hsl(0, 0%, 100%);
+}
+
+/* START CSS */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .header {
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--white);
+    border: 1px solid red;
+    padding: 0 20px;
+  }
+
+  .where {
+    font-size: 1.2rem;
+    font-weight: 800;
+  }
+
+  .darkmode-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .crescent-moon {
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
+  }
+
+  .darkmode {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  .search-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+  }
+
+  .dropdown-menu {
+    margin: 20px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
