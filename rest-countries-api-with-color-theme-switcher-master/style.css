@@ -32,49 +32,102 @@
 
 /* START CSS */
 
+.header {
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--white);
+  border: 1px solid red;
+  padding: 0 20px;
+}
+
+.where {
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.darkmode-container {
+  display: flex;
+  align-items: center;
+}
+
+.crescent-moon {
+  height: 30px;
+  width: 30px;
+  margin-right: 5px;
+}
+
+.darkmode {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.dropdown-menu {
+  margin: 40px;
+}
+
+.country-card-container {
+  height: 100%;
+}
+
+.invisible {
+  display: none;
+}
+
+.country-card {
+  max-width: 295px;
+  overflow: hidden;
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  margin: 40px 40px;
+  cursor: pointer;
+}
+
+.country-container:hover {
+  border: 1px solid black;
+}
+
+.country-container:active {
+  box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.8);
+}
+
+.flag {
+  height: 45%;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.text-container {
+  height: 55%;
+  padding: 30px;
+}
+
+.text-container h1 {
+  font-size: 1.5rem;
+  padding-bottom: 20px;
+}
+
+.text-container h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.h2text {
+  font-weight: 300;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  .header {
-    width: 100vw;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--white);
-    border: 1px solid red;
-    padding: 0 20px;
-  }
-
-  .where {
-    font-size: 1.2rem;
-    font-weight: 800;
-  }
-
-  .darkmode-container {
-    display: flex;
-    align-items: center;
-  }
-
-  .crescent-moon {
-    height: 30px;
-    width: 30px;
-    margin-right: 5px;
-  }
-
-  .darkmode {
-    font-size: 1.2rem;
-    font-weight: 600;
-  }
-
-  .search-container {
-    display: flex;
-    justify-content: center;
-    margin: 20px;
-  }
-
-  .dropdown-menu {
-    margin: 20px;
-  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

@@ -66,37 +66,71 @@
         <h1 class="darkmode">Darkmode</h1>
       </div>
     </header>
-    <div class="search-container">
-      <form method="get" action="/search/" class="search-form">
-        <label>
-          <button class="search-form__button" aria-label="search">🔍</button>
-          <input
-            type="search"
-            name="q"
-            placeholder="Search for a country"
-            id="id_q"
-          />
-        </label>
-      </form>
+
+    <div class="country-card-container invisible">
+      <div class="search-container">
+        <form method="get" action="/search/" class="search-form">
+          <label>
+            <button class="search-form__button" aria-label="search">🔍</button>
+            <input
+              type="search"
+              name="q"
+              placeholder="Search for a country"
+              id="id_q"
+            />
+          </label>
+        </form>
+      </div>
+
+      <nav class="dropdown-menu">
+        <select name="country" id="country">
+          <option value="country1">Country1</option>
+          <option value="country2">Country2</option>
+          <option value="country3">Country3</option>
+          <option value="country4">Country4</option>
+        </select>
+      </nav>
     </div>
-    <nav class="dropdown-menu">
-      <select name="country" id="country">
-        <option value="country1">Country1</option>
-        <option value="country2">Country2</option>
-        <option value="country3">Country3</option>
-        <option value="country4">Country4</option>
-      </select>
-    </nav>
-    <main class="main">
-      <div class="home-container">
-        <img src="#" alt="flag" class="flag" />
-        <div class="text-container">
-          <h1 class="name">Name</h1>
-          <h2 class="population">Population:</h2>
-          <h2 class="region">Region:</h2>
-          <h2 class="capital">Capital:</h2>
+
+    <div class="country-detail-container">
+      <button class="back-btn">⬅ BACK</button>
+      <div class="country-detail">
+        <img src="#" alt="flag-detail" class="flag-detail" />
+        <div class="text-detail-top">
+          <h1 class="name" id="">Belgium</h1>
+          <h2 class="native-name" id="">
+            Native Name:
+            <span class="h2text" id="">Belgie</span>
+          </h2>
+          <h2 class="population" id="">
+            Population:
+            <span class="h2text" id="">11.319.511</span>
+          </h2>
+          <h2 class="region" id="">
+            Region: <span class="h2text" id="">Europe</span>
+          </h2>
+          <h2 class="sub-region" id="">
+            Sub Region: <span class="h2text" id="">Western Europe</span>
+          </h2>
+          <h2 class="capital" id="">
+            Capital: <span class="h2text" id="">Brussels</span>
+          </h2>
+        </div>
+        <div class="text-detail-bottom">
+          <h2 class="top-level-domain" id="">
+            Top Level Domain: <span class="h2text" id="">.be</span>
+          </h2>
+          <h2 class="currencies" id="">
+            Currencies: <span class="h2text" id="">Euro</span>
+          </h2>
+          <h2 class="languages" id="">
+            Languages: <span class="h2text" id="">Dutch, French, German</span>
+          </h2>
+        </div>
+        <div class="border-countries">
+          <button class="border-country" id="">Country1</button>
         </div>
       </div>
-    </main>
+    </div>
   </body>
 </html>
