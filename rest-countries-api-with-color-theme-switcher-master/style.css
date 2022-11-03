@@ -39,8 +39,8 @@
   align-items: center;
   justify-content: space-between;
   background-color: var(--white);
-  border: 1px solid red;
   padding: 0 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
 }
 
 .where {
@@ -134,7 +134,6 @@
 }
 
 .back-btn {
-  border: 1px solid red;
   margin-bottom: 30px;
 }
 

@@ -17,7 +17,6 @@ const apiUrl = "https://restcountries.com/v3.1/all";
 async function getCountries() {
   const response = await fetch(apiUrl);
   const data = await response.json();
-  console.log(data[140]);
   return data;
 }
 
@@ -47,10 +46,14 @@ function displayCountries(allCountries) {
     countrycardContainer.appendChild(div);
 
     div.addEventListener("click", (e) => {
+      const borderCountries = document.querySelector(".border-countries");
+
       countrycardContainer.classList.add("invisible");
       countrydetailContainer.classList.remove("invisible");
+
       console.log(e.target.id);
       console.log(country.name.common);
+
       const languages = Object.values(country.languages);
       const currencies = Object.values(country.currencies);
 
@@ -101,8 +104,32 @@ function displayCountries(allCountries) {
       );
       countrydetailContainer.appendChild(div);
     });
+
     id++;
   });
 }
 
 getCountries().then(displayCountries);
+
+// data.borders.map((x) => {
+//   for (i = 0; i < data.length; i++) {
+//     if (data[i].cca3 === x) {
+//       console.log(`This is country number ${i}: ${data[i].name.common}`);
+//     }
+//   }
+// });
+
+// if (country.borders) {
+//   console.log(`These are my neighbors: ${country.borders}`);
+//   country.borders.forEach((x) => {
+//     console.log(`Hi there, I am neighbor ${x}`);
+//   });
+// } else {
+//   console.log("I have no neighbors.");
+// }
+
+// borderCountries.insertAdjacentHTML("beforeend",
+// `<button class="border-country" id="">Country1</button>
+// <button class="border-country" id="">Country2</button>
+// <button class="border-country" id="">Country3</button>`
+// )
