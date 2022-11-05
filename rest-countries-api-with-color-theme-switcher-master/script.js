@@ -7,6 +7,8 @@ const backBtn = document.querySelector(".back-btn");
 backBtn.addEventListener("click", () => {
   const countryDetail = document.querySelector(".country-detail");
   countryDetail.parentNode.removeChild(countryDetail);
+  const borderCountries = document.querySelector(".border-countries");
+  borderCountries.parentNode.removeChild(borderCountries);
   countrycardContainer.classList.remove("invisible");
   countrydetailContainer.classList.add("invisible");
 });
@@ -21,10 +23,16 @@ async function getCountries() {
 }
 
 // INJECTING CODE INTO HTML //
-function displayCountries(allCountries) {
+function populateHTML(allCountries) {
+  displayCountries(allCountries);
+}
+
+getCountries().then(populateHTML);
+
+function displayCountries(countriesdata) {
   let id = 0;
 
-  allCountries.forEach((country) => {
+  countriesdata.forEach((country) => {
     let div = document.createElement("div");
     div.classList.add("country-card");
     div.id = id;
@@ -46,8 +54,6 @@ function displayCountries(allCountries) {
     countrycardContainer.appendChild(div);
 
     div.addEventListener("click", (e) => {
-      const borderCountries = document.querySelector(".border-countries");
-
       countrycardContainer.classList.add("invisible");
       countrydetailContainer.classList.remove("invisible");
 
@@ -93,43 +99,51 @@ function displayCountries(allCountries) {
             ", "
           )}</span></h2>
         </div>
-
-        <div class="border-countries">
-          <h2 class="border-countries-title" id="">Border Countries:</h2>
-          <button class="border-country" id="">Country1</button>
-          <button class="border-country" id="">Country2</button>
-          <button class="border-country" id="">Country3</button>
-        </div>
       `
       );
-      countrydetailContainer.appendChild(div);
-    });
 
+      let div2 = document.createElement("div");
+      div2.classList.add("border-countries");
+
+      if (country.borders) {
+        console.log(`These are my neighbors: ${country.borders}`);
+        div2.insertAdjacentHTML(
+          "beforeend",
+          `<h2 class="border-countries-title">Border Countries:</h2>`
+        );
+
+        country.borders.map((x) => {
+          for (i = 0; i < countriesdata.length; i++) {
+            if (countriesdata[i].cca3 === x) {
+              let btn = document.createElement("button");
+              btn.classList.add("border-country");
+              btn.id = i;
+              btn.innerHTML = countriesdata[i].name.common;
+              btn.addEventListener("click", (e) => {
+                console.log(
+                  `You clicked ${countriesdata[e.target.id].name.common}`
+                );
+              });
+              div2.appendChild(btn);
+            }
+          }
+        });
+      } else {
+        console.log("I have no neighbors.");
+      }
+      countrydetailContainer.appendChild(div);
+      countrydetailContainer.appendChild(div2);
+    });
     id++;
   });
 }
 
-getCountries().then(displayCountries);
-
-// data.borders.map((x) => {
-//   for (i = 0; i < data.length; i++) {
-//     if (data[i].cca3 === x) {
-//       console.log(`This is country number ${i}: ${data[i].name.common}`);
-//     }
-//   }
+// let borderbtn = document.querySelector(".border-country");
+// borderbtn.addEventListener("click", () => {
+//   console.log("I work");
 // });
 
-// if (country.borders) {
-//   console.log(`These are my neighbors: ${country.borders}`);
-//   country.borders.forEach((x) => {
-//     console.log(`Hi there, I am neighbor ${x}`);
-//   });
-// } else {
-//   console.log("I have no neighbors.");
-// }
-
-// borderCountries.insertAdjacentHTML("beforeend",
-// `<button class="border-country" id="">Country1</button>
-// <button class="border-country" id="">Country2</button>
-// <button class="border-country" id="">Country3</button>`
-// )
+// div2.insertAdjacentHTML(
+//   "beforeend",
+//   `<button class="border-country" id=${i}>${countriesdata[i].name.common}</button>`
+// );

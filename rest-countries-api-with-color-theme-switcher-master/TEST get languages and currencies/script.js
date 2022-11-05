@@ -1,4 +1,5 @@
 const apiUrl = "https://restcountries.com/v3.1/all";
+const container = document.querySelector(".container");
 
 // FETCHING DATA FROM API-SERVER //
 async function getCountries() {
@@ -19,7 +20,7 @@ function printLanguages(allCountries) {
 }
 
 function checkCountry(data) {
-  const borders = Object.values(data[18].borders);
+  const borders = data[18].borders;
   console.log(borders);
   borders.map((x) => {
     for (i = 0; i < data.length; i++) {
