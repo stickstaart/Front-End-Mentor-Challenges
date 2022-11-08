@@ -12,12 +12,23 @@ async function getCountries() {
 getCountries().then(printLanguages);
 
 function printLanguages(allCountries) {
+  populateHTML(allCountries);
   checkCountry(allCountries);
-  const languages = Object.values(allCountries[18].languages);
-  console.log(languages);
-  const currencies = Object.values(allCountries[18].currencies);
-  console.log(currencies[0].name);
+  // const languages = Object.values(allCountries[18].languages);
+  // console.log(languages);
+  // const currencies = Object.values(allCountries[18].currencies);
+  // console.log(currencies[0].name);
 }
+
+const populateHTML = (data) => {
+  console.log(data[0]);
+  const div = document.createElement("div");
+  const btn = document.createElement("button");
+  btn.innerHTML = data[0].name.common;
+  div.appendChild(btn);
+  container.appendChild(div);
+  btn.addEventListener("click", detailCountry);
+};
 
 function checkCountry(data) {
   const borders = data[18].borders;
@@ -30,3 +41,7 @@ function checkCountry(data) {
     }
   });
 }
+
+const detailCountry = (data) => {
+  console.log(data);
+};
